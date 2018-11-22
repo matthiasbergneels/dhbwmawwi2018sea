@@ -2,7 +2,7 @@ package uebungen.kapitel4;
 
 import javax.swing.*;
 
-public class SiebDesEratosthenes {
+public class  SiebDesEratosthenes {
 
 
     public static void main(String[] args) {

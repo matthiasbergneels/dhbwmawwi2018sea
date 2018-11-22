@@ -4,7 +4,11 @@ public class CarTest {
 
     public static void main(String[] args) {
 
+        System.out.println("Es gibt " +  Car.getCarCounter() + " Autos.");
+
         Car myCar = new Car(Car.Colors.GRUEN, 150, "HD-XX 1234", "BMW");
+        Car car01 = new Car(Car.Colors.GRUEN, 150, "HD-XX 1234", "BMW");
+        Car car02 = new Car(Car.Colors.GRUEN, 150, "HD-XX 1234", "BMW");
 
         /* Initialisiert durch Konstruktor
         myCar.color = "lila";
@@ -43,5 +47,24 @@ public class CarTest {
         System.out.println("Aktuelle Geschwindigkeit von myCar: " + myCar.getCurrentSpeed());
 
         System.out.println("Aktuelle Geschwindigkeit von yourCar: " + yourCar.getCurrentSpeed());
+
+        System.out.println("Es gibt " +  Car.getCarCounter() + " Autos.");
+
+
+        // Verschrotten
+
+        car01 = null;
+        car02 = null;
+
+
+        System.gc();
+
+        try{
+            Thread.sleep(1000);
+        }catch(Exception e){
+
+        }
+
+        System.out.println("Es gibt " +  Car.getCarCounter() + " Autos.");
     }
 }

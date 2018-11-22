@@ -9,6 +9,9 @@ public class Car {
     private double currentSpeed;
 
 
+    private static int carCounter;
+
+
     enum Colors{
         SCHWARZ, ROT, LILA, BLAU, GRUEN
     }
@@ -21,6 +24,7 @@ public class Car {
         this.setBrand(brand);
 
         this.currentSpeed = 0.0;
+        carCounter++;
 
     }
 
@@ -74,6 +78,15 @@ public class Car {
 
     double howFastIsOurCar(){
         return currentSpeed;
+    }
+
+    public static int getCarCounter(){
+        return carCounter;
+    }
+
+    protected void finalize(){
+        carCounter--;
+        System.out.println("Auto wird verschrottet!");
     }
 
 }
