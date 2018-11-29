@@ -4,6 +4,10 @@ public class CarTest {
 
     public static void main(String[] args) {
 
+
+        byte number = 4;
+
+
         System.out.println("Es gibt " +  Car.getCarCounter() + " Autos.");
 
         Car myCar = new Car(Car.Colors.GRUEN, 150, "HD-XX 1234", "BMW");
