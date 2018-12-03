@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19081b6b-264f-48ed-9b95-58f07a3264fc" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/Weihnachts-Exkurs.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/aplujar5.zip" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ProgrammierenSkript/Weihnachten/aplujar5/readme.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/christmas/TurtleExample.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/bahnhof/BahnhofTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/bahnhof/Fracht.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/bahnhof/Gueterwagon.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/bahnhof/Gueterzug.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/bahnhof/Zugfuehrer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/bahnhof/Zuglokomotive.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/hausbau/Haus.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/uebungen/kapitel5/hausbau/HausTest.java" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/aplu5.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dhbwmawwi2018sea.iml" afterPath="$PROJECT_DIR$/.idea/dhbwmawwi2018sea.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -119,8 +108,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="168">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -179,11 +168,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="840" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="840" />
-    <option name="height" value="971" />
+    <option name="height" value="972" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -212,35 +200,6 @@
               <item name="dhbwmawwi2018sea" type="b2602c69:ProjectViewProjectNode" />
               <item name="dhbwmawwi2018sea" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="dhbwmawwi2018sea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhbwmawwi2018sea" type="462c0819:PsiDirectoryNode" />
-              <item name="ProgrammierenSkript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dhbwmawwi2018sea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhbwmawwi2018sea" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dhbwmawwi2018sea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhbwmawwi2018sea" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="kapitel6" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dhbwmawwi2018sea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhbwmawwi2018sea" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="uebungen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dhbwmawwi2018sea" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dhbwmawwi2018sea" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="uebungen" type="462c0819:PsiDirectoryNode" />
-              <item name="christmas" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -254,7 +213,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="10.0" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="full.screen.before.presentation.mode" value="false" />
@@ -505,7 +464,7 @@
       <workItem from="1542639059102" duration="130000" />
       <workItem from="1542895223774" duration="4241000" />
       <workItem from="1543502866828" duration="4473000" />
-      <workItem from="1543840693224" duration="307000" />
+      <workItem from="1543840693224" duration="493000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Repo commit">
       <created>1539262313642</created>
@@ -525,11 +484,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34635000" />
+    <option name="totallyTimeSpent" value="34821000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="840" y="23" width="840" height="971" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1680" height="971" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -543,7 +501,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46272492" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22249691" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -690,8 +648,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="168">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -753,6 +711,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -772,6 +731,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>aplu5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
