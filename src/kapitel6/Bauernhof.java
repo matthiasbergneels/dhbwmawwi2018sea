@@ -15,12 +15,12 @@ public class Bauernhof {
         bello.bewegen();
         bello.fressen();
         bello.fressen(1.5f);
-        bello.atmet();
+        bello.atmen();
 
         nemo.blubbern();
         nemo.bewegen();
         nemo.fressen();
-        nemo.atmet();
+        nemo.atmen();
         
         
         // Narrowing Cast
@@ -65,7 +65,7 @@ public class Bauernhof {
         }
         
         // Widening Cast
-        Hund einHund = (Hund)tierseSindObjekte;
+        Hund einHund = (Hund)tiereSindObjekte;
         
         System.out.println(bello);
         System.out.println(nemo);

@@ -21,7 +21,7 @@ public abstract class Tier {
         System.out.println("Das Tier " + this.getBezeichnung() + " bewegt sich.");
     }
 
-    public abstract void atmet();
+    public abstract void atmen();
 
     public float getGewicht() {
         return gewicht;

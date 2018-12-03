@@ -16,7 +16,7 @@ public class Fisch extends Tier{
     }
 
     @Override
-    public void atmet() {
+    public void atmen() {
         System.out.println("Der Fisch " + getBezeichnung() + " atment - *blubber*");
     }
 

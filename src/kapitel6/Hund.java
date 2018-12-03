@@ -14,7 +14,7 @@ public final class Hund extends Tier{
     }
 
     @Override
-    public void atmet() {
+    public void atmen() {
         System.out.println("Der Hund " + getBezeichnung() + " atmet - *hächel*");
     }
 
