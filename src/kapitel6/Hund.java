@@ -39,6 +39,8 @@ public final class Hund extends Tier{
 
     @Override
     public String toString() {
+
         return super.toString() + ", Rasse: " + getRasse();
     }
+
 }
