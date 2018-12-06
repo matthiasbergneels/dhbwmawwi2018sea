@@ -16,11 +16,16 @@ public class Hotel implements Bookable{
 
     @Override
     public int freePlaces() {
-        return 0;
+        return roomsCount - bookedRoomsCount;
     }
 
     @Override
     public boolean book(int placesCount) {
-        return false;
+        if(placesCount > freePlaces()){
+            return false;
+        }else{
+            bookedRoomsCount = bookedRoomsCount + placesCount;
+        }
+        return true;
     }
 }

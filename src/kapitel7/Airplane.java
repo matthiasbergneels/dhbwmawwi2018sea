@@ -15,11 +15,32 @@ public class Airplane implements Bookable{
 
     @Override
     public int freePlaces() {
-        return 0;
+        // false = frei; true = besetzt
+        int count = 0;
+        for(boolean[] row : seats){
+            for(boolean seat : row){
+                if(!seat){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     @Override
     public boolean book(int placesCount) {
-        return false;
+        if(placesCount > freePlaces()){
+            return false;
+        }else{
+            for(int i = 0; i < seats.length; i++){
+                for(int j = 0; j < seats[i].length; j++){
+                    if(placesCount > 0 && !seats[i][j]){
+                        seats[i][j] = true;
+                        placesCount--;
+                    }
+                }
+            }
+            return true;
+        }
     }
 }
