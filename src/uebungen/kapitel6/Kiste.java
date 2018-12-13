@@ -4,12 +4,14 @@ import uebungen.kapitel5.bahnhof.Fracht;
 
 public class Kiste extends Fracht {
 
+    private static final String TYP = "Kiste";
+
     private int breite;
     private int hoehe;
     private int tiefe;
 
     public Kiste(String bezeichnung, double menge, int breite, int hoehe, int tiefe){
-        super(bezeichnung, menge, "Kiste");
+        super(bezeichnung, menge, TYP);
         this.setBreite(breite);
         this.setHoehe(hoehe);
         this.setTiefe(tiefe);
