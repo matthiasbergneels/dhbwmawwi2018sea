@@ -81,4 +81,17 @@ public class Student implements Comparable<Student>{
 
         return this.getAge() == student.getAge();
     }
+
+    @Override
+    public int hashCode() {
+        int hc = 89;
+        int multiply = 59;
+
+        hc = hc * multiply + this.getStudentId();
+        hc = hc * multiply + ((this.getFamilyName() == null) ? 0 : this.getFamilyName().hashCode());
+        hc = hc * multiply + ((this.getName() == null) ? 0 : this.getName().hashCode());
+        hc = hc * multiply + this.getAge();
+
+        return hc;
+    }
 }
