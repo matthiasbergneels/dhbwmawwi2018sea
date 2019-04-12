@@ -1,25 +1,18 @@
 package kapitel10;
 
-import java.awt.GridLayout;
-import java.awt.FlowLayout;
-import java.awt.BorderLayout;
+import java.awt.*;
+import java.awt.event.*;
 import java.text.ParseException;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JFormattedTextField;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
-import javax.swing.WindowConstants;
-import javax.swing.JFrame;
+import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
 import javax.swing.text.MaskFormatter;
 
 public class Logon extends JFrame{
+
+    private static final String OK_COMMAND = "OK";
+    private static final String CANCEL_COMMAND = "CANCEL";
 
     public Logon(){
 
@@ -73,7 +66,75 @@ public class Logon extends JFrame{
 
         // create & assign Buttons
         JButton okButton = new JButton("Ok");
-        JButton cancelButton = new JButton("Cancel");
+        JButton cancelButton = new JButton("Schliessen");
+        okButton.setActionCommand(OK_COMMAND);
+        cancelButton.setActionCommand(CANCEL_COMMAND);
+
+        /* Local Class Implementation
+        ActionListener buttonListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(e.getActionCommand());
+
+                if(e.getActionCommand().equals(OK_COMMAND)){
+                    System.out.println("Combobox Inhalt: " + myComboBox.getSelectedItem());
+                }else if(e.getActionCommand().equals(CANCEL_COMMAND)){
+                    System.exit(0);
+                }
+
+            }
+        };*/
+
+        // Lambda implementation
+        ActionListener buttonListener = e -> {
+            System.out.println(e.getActionCommand());
+
+            if(e.getActionCommand().equals(OK_COMMAND)){
+                System.out.println("Combobox Inhalt: " + myComboBox.getSelectedItem());
+            }else if(e.getActionCommand().equals(CANCEL_COMMAND)){
+                System.exit(0);
+            }
+        };
+
+        myComboBox.addItemListener(e -> {
+            if(e.getStateChange() == ItemEvent.SELECTED){
+                System.out.println("Neuer Wert: " + e.getItem());
+            }
+
+        });
+
+        MouseListener myMouseListener = new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                System.out.println(e.getSource() + " clicked!");
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                System.out.println(e.getSource() + " pressed!");
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                System.out.println(e.getSource() + " released!");
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                System.out.println(e.getSource() + " entered!");
+                Logon.this.setBounds(500, 500, 100, 100);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                System.out.println(e.getSource() + " left!");
+            }
+        };
+
+        okButton.addActionListener(buttonListener);
+        cancelButton.addActionListener(buttonListener);
+        cancelButton.addMouseListener(myMouseListener);
+
 
         southPanel.add(okButton);
         southPanel.add(cancelButton);
@@ -105,6 +166,10 @@ public class Logon extends JFrame{
     }
 
     public static void main(String[] args){
+        Dimension screenDimension = Toolkit.getDefaultToolkit().getScreenSize();
+
+        System.out.println("Screen Dimension: " + screenDimension.getWidth() + " x " + screenDimension.getHeight());
+
         new Logon();
     }
 
