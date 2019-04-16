@@ -100,6 +100,7 @@ public class MeldeamtUI extends JFrame {
                 } else if (action.equals(ACTION_SHOWLIST)) {
                     Listenoperationen.listeAusgeben();
                 } else if (action.equals(ACTION_CLOSE)) {
+                    Listenoperationen.persistTreeSetToFile();
                     System.exit(0);
                 }
 
@@ -157,7 +158,7 @@ public class MeldeamtUI extends JFrame {
         contactDataPanel.setBorder(contactEtchedBorder);
         centerPanel.add(contactDataPanel);
 
-        String[] titleValues = { Einwohner.ANREDE_FRAU, Einwohner.ANREDE_HERR };
+        String[] titleValues = { Einwohner.ANREDE_FRAU, Einwohner.ANREDE_HERR, Einwohner.ANREDE_DIVERS };
 
         cbbTitle = new JComboBox<String>(titleValues);
         tfName = new JTextField(20);
@@ -170,8 +171,10 @@ public class MeldeamtUI extends JFrame {
         tfEmail.setText("mimi.mustermann@email.de");
 
         contactDataPanel.add(new JLabel("Anrede:"));
+        cbbTitle.setToolTipText("Anrede auswählen");
         contactDataPanel.add(cbbTitle);
         contactDataPanel.add(new JLabel("Name:"));
+        tfName.setToolTipText("Nachname eingeben - z.B. \"Mustermann\"");
         contactDataPanel.add(tfName);
         contactDataPanel.add(new JLabel("Vorname:"));
         contactDataPanel.add(tfVorname);
@@ -281,10 +284,13 @@ public class MeldeamtUI extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         this.pack();
+
+        Listenoperationen.readTreeSetFromFile();
     }
 
     public static void main(String[] args) {
         new MeldeamtUI("Einwohnermeldeamt");
+
 
     }
 

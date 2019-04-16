@@ -125,7 +125,7 @@ public class Logon extends JFrame{
                 //Logon.this.setBounds(500, 500, 100, 100);
                 try {
                     Robot mouseRobot = new Robot();
-                    //mouseRobot.mouseMove(0,0);
+                    mouseRobot.mouseMove(0,0);
                 } catch (AWTException e1) {
                     e1.printStackTrace();
                 }

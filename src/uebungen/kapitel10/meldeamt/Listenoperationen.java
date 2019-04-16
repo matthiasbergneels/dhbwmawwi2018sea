@@ -1,10 +1,12 @@
 package uebungen.kapitel10.meldeamt;
 
+import java.io.*;
 import java.util.Iterator;
 import java.util.TreeSet;
 
 public class Listenoperationen {
 
+    private static final String FILENAME = "EinwohnerListe.txt";
     private static TreeSet<Einwohner> liste = new TreeSet<Einwohner>();
 
     private static Einwohner ermittleObjekt(String name, String vorname){
@@ -77,6 +79,100 @@ public class Listenoperationen {
             }
         }else{
             System.out.println("Die Liste ist leer!");
+        }
+    }
+
+    public static void persistTreeSetToFile(){
+
+        File einwohnerFile = new File(FILENAME);
+        if(!einwohnerFile.exists()){
+            try {
+                einwohnerFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        try(FileOutputStream einwohnerFileOutputStream = new FileOutputStream(einwohnerFile);
+            ObjectOutputStream einwohnerObjectOutputStream = new ObjectOutputStream(einwohnerFileOutputStream)){
+
+            einwohnerObjectOutputStream.writeObject(liste);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /*
+        try(FileWriter einwohnerFileWriter = new FileWriter(einwohnerFile)){
+
+            Iterator<Einwohner> einwohnerIterator = liste.iterator();
+            while(einwohnerIterator.hasNext()){
+                String einwohnerZeile = "";
+                Einwohner einwohner = einwohnerIterator.next();
+
+                einwohnerZeile += einwohner.getName() + ";";
+                einwohnerZeile += einwohner.getVorname() + ";";
+                einwohnerZeile += einwohner.getGebName() + ";";
+                einwohnerZeile += einwohner.getAnrede() + ";";
+                einwohnerZeile += einwohner.getEmail() + ";";
+                einwohnerZeile += einwohner.getFamilienstand() + ";";
+                einwohnerZeile += einwohner.hashCode() + "\n";
+
+                einwohnerFileWriter.write(einwohnerZeile);
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        */
+
+    }
+
+    public static void readTreeSetFromFile(){
+        File einwohnerFile = new File(FILENAME);
+        if(einwohnerFile.exists()){
+
+            try(FileInputStream einwohnerFileInputStream = new FileInputStream(einwohnerFile);
+                ObjectInputStream einwohnerObjectInputStream = new ObjectInputStream(einwohnerFileInputStream)){
+
+                liste = (TreeSet<Einwohner>)einwohnerObjectInputStream.readObject();
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
+            /*
+            try(FileReader einwohnerFileReader = new FileReader(einwohnerFile);
+                    BufferedReader einwohnerReader = new BufferedReader(einwohnerFileReader)){
+
+                String einwohnerZeile;
+                while((einwohnerZeile = einwohnerReader.readLine()) != null){
+                    String[] einwohnerSpalten = einwohnerZeile.split(";");
+
+                    Listenoperationen.hinzufuegen(einwohnerSpalten[0],
+                                                    einwohnerSpalten[1],
+                                                    einwohnerSpalten[2],
+                                                    einwohnerSpalten[4],
+                                                    einwohnerSpalten[3],
+                                                    einwohnerSpalten[5]);
+
+                }
+
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            */
+
         }
     }
 }

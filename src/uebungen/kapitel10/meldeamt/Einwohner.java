@@ -1,9 +1,14 @@
 package uebungen.kapitel10.meldeamt;
 
-public class Einwohner implements Comparable<Einwohner> {
+import java.io.Serializable;
+
+public class Einwohner implements Comparable<Einwohner>, Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     public static String ANREDE_FRAU = "Frau";
     public static String ANREDE_HERR = "Herr";
+    public static String ANREDE_DIVERS = "DIVERS";
 
     public static String FAMILIENSTAND_LEDIG = "ledig";
     public static String FAMILIENSTAND_VERHEIRATET = "verheiratet";
@@ -55,7 +60,7 @@ public class Einwohner implements Comparable<Einwohner> {
 
     @Override
     public int hashCode() {
-        return this.getName().hashCode() ^ this.getVorname().hashCode() ^this.getGebName().hashCode();
+        return this.getName().hashCode() ^ this.getVorname().hashCode();
     }
 
     @Override
