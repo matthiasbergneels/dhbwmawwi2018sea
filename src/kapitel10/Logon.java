@@ -122,7 +122,13 @@ public class Logon extends JFrame{
             @Override
             public void mouseEntered(MouseEvent e) {
                 System.out.println(e.getSource() + " entered!");
-                Logon.this.setBounds(500, 500, 100, 100);
+                //Logon.this.setBounds(500, 500, 100, 100);
+                try {
+                    Robot mouseRobot = new Robot();
+                    //mouseRobot.mouseMove(0,0);
+                } catch (AWTException e1) {
+                    e1.printStackTrace();
+                }
             }
 
             @Override
