@@ -15,6 +15,7 @@ public class BinaryTreeTest {
 
 
         System.out.println("Anzahl an Zahlen: " + numberTree.size());
+        numberTree.print();
 
 
         BinaryTree<String> wordTree = new BinaryTree<String>();
@@ -25,7 +26,7 @@ public class BinaryTreeTest {
         wordTree.insert("Zeus");
         wordTree.insert("Franz");
 
-
         System.out.println("Anzahl an Woerter: " + wordTree.size());
+        wordTree.print();
     }
 }

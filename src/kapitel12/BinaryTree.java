@@ -34,6 +34,26 @@ public class BinaryTree<T> {
         }
     }
 
+    public void print(){
+        if(root != null){
+            print(root);
+        }else{
+            System.out.println("Keine Elemente vorhanden");
+        }
+    }
+
+    public void print(Node<T> currentNode){
+        if(currentNode.getLeftNode() != null){
+            print(currentNode.getLeftNode());
+        }
+
+        System.out.println(currentNode.getData());
+
+        if(currentNode.getRightNode() != null){
+            print(currentNode.getRightNode());
+        }
+    }
+
     public int size(){
         return size;
     }
